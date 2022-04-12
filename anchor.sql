@@ -15,8 +15,8 @@ CREATE TABLE `user` (
 );
 
 CREATE TABLE `series` (
-	`series_id`	int	NOT NULL,
-	`series_name`	varchar(100)	NULL
+	`series_id`	int	NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`series_name`	varchar(100)	NULL UNIQUE
 );
 
 CREATE TABLE `book` (
@@ -48,7 +48,7 @@ CREATE TABLE `like` (
 );
 
 CREATE TABLE `episode` (
-	`edisode_num`	int	NOT NULL,
+	`episode_num`	int	NOT NULL,
 	`book_id`	int	NOT NULL,
 	`episode_name`	varchar(100)	NULL
 );
@@ -61,10 +61,6 @@ CREATE TABLE `refresh_token` (
 
 ALTER TABLE `user` ADD CONSTRAINT `PK_USER` PRIMARY KEY (
 	`user_seq`
-);
-
-ALTER TABLE `series` ADD CONSTRAINT `PK_SERIES` PRIMARY KEY (
-	`series_id`
 );
 
 ALTER TABLE `book` ADD CONSTRAINT `PK_BOOK` PRIMARY KEY (
@@ -81,7 +77,7 @@ ALTER TABLE `like` ADD CONSTRAINT `PK_LIKE` PRIMARY KEY (
 );
 
 ALTER TABLE `episode` ADD CONSTRAINT `PK_EPISODE` PRIMARY KEY (
-	`edisode_num`,
+	`episode_num`,
 	`book_id`
 );
 
