@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/onnada_crawller.iml" filepath="$PROJECT_DIR$/onnada_crawller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anchor_crawler.iml" filepath="$PROJECT_DIR$/anchor_crawler.iml" />
     </modules>
   </component>
 </project>

@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e01c1551-a904-4f30-a4ae-8fe707b94a13" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/crawler" beforeDir="false" afterPath="$PROJECT_DIR$/crawler" afterDir="false" />
+    <list default="true" id="483d9e5a-0535-4926-9c9d-be88f5d09f0d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/anchor_crawler/Crawler/CrawlerDBUpdate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Crawler/CrawlerDBUpdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anchor.sql" beforeDir="false" afterPath="$PROJECT_DIR$/anchor.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/onnada_crawller.iml" beforeDir="false" afterPath="$PROJECT_DIR$/anchor_crawler.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/out/production/onnada_crawller/Crawler/Crawler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/anchor_crawler/Crawler/CrawlerVeryFirst.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/out/production/onnada_crawller/Crawler/SSLCaller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/anchor_crawler/Crawler/SSLCaller$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/out/production/onnada_crawller/Crawler/SSLCaller$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/anchor_crawler/Crawler/SSLCaller$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/out/production/onnada_crawller/Crawler/SSLCaller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/anchor_crawler/Crawler/SSLCaller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/src/Crawler/Crawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Crawler/CrawlerVeryFirst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/src/Crawler/SSLCaller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Crawler/SSLCaller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="27PEMMN53oSExclEfsIrpn1ogcY" />
+  <component name="ProjectId" id="27h21J4qUGDKKNshkFckJwUnObZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -29,15 +44,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/crawler" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DOWN/mysql-connector-java-8.0.27.jar" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.Crawler">
-    <configuration name="Crawler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Crawler.Crawler" />
-      <module name="onnada_crawller" />
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Crawler" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.CrawlerDBUpdate">
+    <configuration name="CrawlerDBUpdate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Crawler.CrawlerDBUpdate" />
+      <module name="anchor_crawler" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Crawler.*" />
@@ -48,22 +68,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CrawlerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Crawler.CrawlerTest" />
-      <module name="onnada_crawller" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Crawler.CrawlerTest" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CrawlerTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Crawler.CrawlerTest2" />
-      <module name="onnada_crawller" />
+    <configuration name="CrawlerVeryFirst" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Crawler.CrawlerVeryFirst" />
+      <module name="anchor_crawler" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Crawler.*" />
@@ -75,11 +82,11 @@
       </method>
     </configuration>
     <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.test" />
-      <module name="onnada_crawller" />
+      <option name="MAIN_CLASS_NAME" value="Crawler.test" />
+      <module name="anchor_crawler" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Crawler.CrawlerTest" />
+          <option name="PATTERN" value="Crawler.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -89,21 +96,20 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Crawler" />
-        <item itemvalue="Application.CrawlerTest" />
-        <item itemvalue="Application.CrawlerTest2" />
+        <item itemvalue="Application.CrawlerDBUpdate" />
         <item itemvalue="Application.test" />
+        <item itemvalue="Application.CrawlerVeryFirst" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e01c1551-a904-4f30-a4ae-8fe707b94a13" name="Default Changelist" comment="" />
-      <created>1649213275401</created>
+      <changelist id="483d9e5a-0535-4926-9c9d-be88f5d09f0d" name="Default Changelist" comment="" />
+      <created>1649757783105</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1649213275401</updated>
+      <updated>1649757783105</updated>
     </task>
     <servers />
   </component>

@@ -1,5 +1,5 @@
-CREATE DATABASE test;
-USE test;
+CREATE DATABASE anchor;
+USE anchor;
 
 CREATE TABLE `user` (
 	`user_seq`	bigint	NOT NULL,
