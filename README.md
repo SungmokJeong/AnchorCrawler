@@ -4,4 +4,4 @@
 
 
 CrawlerVeryFirst - 최초 db생성시 실행 (timeout issue 있음)  
-CrawlerForCronjob - 크론잡을 이용한 주기적 db업데이트를 위한 프로그램
+CrawlerDBUpdate - 크론잡을 통해 주기적 db업데이트를 위한 프로그램
