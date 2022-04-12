@@ -47,14 +47,15 @@ public class Crawler {
                 JSONParser parser = new JSONParser();
                 JSONObject obj = (JSONObject) parser.parse(str);
 
-                System.out.println(i);
-                System.out.println(obj.get("title"));
-                System.out.println(obj.get("isbn"));
-                System.out.println(obj.get("link"));
-                System.out.println(obj.get("author"));
-                System.out.println(obj.get("pubdate"));
-                System.out.println(obj.get("publisher"));
-                System.out.println(obj.get("price"));
+                System.out.println("book_id : " + i);
+                System.out.println("book_name : " + obj.get("title"));
+                System.out.println("book_url : " + obj.get("link"));
+                System.out.println("isbn : " + obj.get("isbn"));
+                System.out.println("author : " + obj.get("author"));
+                System.out.println("created_at : " + obj.get("pubdate"));
+                System.out.println("publisher : " + obj.get("publisher"));
+                System.out.println("price : " + obj.get("price"));
+                System.out.println("\n");
                 String sql = "INSERT IGNORE INTO book(book_id, book_name, book_url, isbn, author, created_at, publisher, price) VALUES("
                         + i + ", '" + obj.get("title") + "', '" + obj.get("link") + "', '"+ obj.get("isbn") + "', '"
                         + obj.get("author") + "', '" + obj.get("pubdate") + "', '" + obj.get("publisher")
