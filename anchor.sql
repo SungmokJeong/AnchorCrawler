@@ -85,24 +85,26 @@ ALTER TABLE `refresh_token` ADD CONSTRAINT `PK_REFRESH_TOKEN` PRIMARY KEY (
 	`refresh_token_seq`
 );
 
+ALTER TABLE `book` ADD CONSTRAINT `FK_series_TO_book_1` FOREIGN KEY (
+	`series_id`
+) REFERENCES `series` (
+	`series_id`
+);
+
 ALTER TABLE `like` ADD CONSTRAINT `FK_user_TO_like_1` FOREIGN KEY (
 	`user_seq`
-)
-REFERENCES `user` (
+) REFERENCES `user` (
 	`user_seq`
 );
 
 ALTER TABLE `like` ADD CONSTRAINT `FK_comment_TO_like_1` FOREIGN KEY (
 	`comment_id`
-)
-REFERENCES `comment` (
+) REFERENCES `comment` (
 	`comment_id`
 );
 
 ALTER TABLE `episode` ADD CONSTRAINT `FK_book_TO_episode_1` FOREIGN KEY (
 	`book_id`
-)
-REFERENCES `book` (
+) REFERENCES `book` (
 	`book_id`
 );
-
