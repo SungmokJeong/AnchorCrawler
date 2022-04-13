@@ -63,12 +63,11 @@ public class CrawlerDBUpdate {
                 JSONParser parser = new JSONParser();
                 JSONObject obj = (JSONObject) parser.parse(json);
 
-                int price = Integer.parseInt(obj.get("price").toString()); //series_id;
                 String str[] = obj.get("title").toString().split(" ");
-                int series_num = (int)Double.parseDouble(str[str.length - 1]);
+                int series_num = util.isInteger(str[str.length - 1]) == true ? Integer.parseInt(str[str.length - 1]) : 0;
                 String book_name = obj.get("title").toString();
                 String series_name = obj.get("title").toString().replaceAll("\\s[.0-9]*$", "");
-                String book_url = obj.get("link").toString();
+                String book_url = obj.get("link") != null ? obj.get("link").toString() : ""; // "link":null 일 경우에 NullPointerException 발생하는것 방지
                 String isbn = obj.get("isbn").toString();
                 String author = obj.get("author").toString();
                 String created_at = obj.get("pubdate").toString();
@@ -78,11 +77,13 @@ public class CrawlerDBUpdate {
 
                 String query = "INSERT IGNORE INTO book(book_id, book_name, series_num, book_url, isbn, author, created_at, publisher, price, series_id) VALUES("
                         + i + ", '" + book_name + "', '" + series_num + "', '" + book_url + "', '" + isbn + "', '"
-                        + author + "', '" + created_at + "', '" + publisher + "', " + price
+                        + author + "', '" + created_at + "', '" + publisher + "', " + obj.get("price")
                         + ", (SELECT series_id FROM series WHERE series_name like '" + series_name + "'));";
-                print.print_book_data(i, series_num, price, book_name, series_name, book_url, isbn, author, created_at, publisher);
+                util.print_book_data(i, series_num, book_name, series_name, book_url, isbn, author, created_at, publisher);
+                System.out.println("price : " + obj.get("price") + "\n");
                 stmt.execute(query);
             }
         } catch (Exception e) { e.printStackTrace();}
+        System.out.println("update finished");
     }
 }

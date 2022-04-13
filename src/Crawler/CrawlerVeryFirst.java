@@ -39,20 +39,20 @@ public class CrawlerVeryFirst {
             conn = DriverManager.getConnection(mysqlUrl, id, pw);
             Statement stmt = conn.createStatement();
 
-            int break_trigger = 0; // break_trigger가 5가 되면 break
+            int break_trigger = 0; // break_trigger가 10이 되면 break
             for (int i = 1; i <= 25000; i++) {
                 String json = ScriptToJSON(i);
                 if (json == "null") {
                     break_trigger++;
                     continue;
                 }
-                if (break_trigger == 5)
+                if (break_trigger == 10)
                     break;
 
                 JSONParser parser = new JSONParser();
                 JSONObject obj = (JSONObject) parser.parse(json);
 
-                int price = Integer.parseInt(obj.get("price").toString()); //series_id;
+                int price = Integer.parseInt(obj.get("price").toString());
                 String str[] = obj.get("title").toString().split(" ");
                 int series_num = (int)Double.parseDouble(str[str.length - 1]);
                 String book_name = obj.get("title").toString();
@@ -69,7 +69,7 @@ public class CrawlerVeryFirst {
                         + i + ", '" + book_name + "', '" + series_num + "', '" + book_url + "', '" + isbn + "', '"
                         + author + "', '" + created_at + "', '" + publisher + "', " + price
                         + ", (SELECT series_id FROM series WHERE series_name like '" + series_name + "'));";
-                print.print_book_data(i, series_num, price, book_name, series_name, book_url, isbn, author, created_at, publisher);
+                util.print_book_data(i, series_num, book_name, series_name, book_url, isbn, author, created_at, publisher);
                 stmt.execute(query);
             }
         } catch (Exception e) { e.printStackTrace();}
