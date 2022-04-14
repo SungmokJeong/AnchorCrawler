@@ -50,15 +50,12 @@ public class CrawlerDBUpdate {
                 recent_book_id = rs.getInt("recent_book_id");
             System.out.println("recent book_id : " + recent_book_id + "\n");
 
-            int break_trigger = 0; // break_trigger가 5가 되면 break
             for (int i = recent_book_id + 1; true; i++) {
                 String json = ScriptToJSON(i);
                 if (json == "null") {
-                    break_trigger++;
-                    continue;
-                }
-                if (break_trigger == 5)
+                    System.out.println("update finished");
                     break;
+                }
 
                 JSONParser parser = new JSONParser();
                 JSONObject obj = (JSONObject) parser.parse(json);
@@ -84,6 +81,5 @@ public class CrawlerDBUpdate {
                 stmt.execute(query);
             }
         } catch (Exception e) { e.printStackTrace();}
-        System.out.println("update finished");
     }
 }

@@ -4,11 +4,7 @@
     <list default="true" id="483d9e5a-0535-4926-9c9d-be88f5d09f0d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/anchor_crawler/Crawler/CrawlerDBUpdate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/anchor_crawler/Crawler/CrawlerDBUpdate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/anchor_crawler/Crawler/CrawlerVeryFirst.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/anchor_crawler/Crawler/CrawlerVeryFirst.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/anchor_crawler/Crawler/print.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Crawler/CrawlerDBUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Crawler/CrawlerDBUpdate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Crawler/CrawlerVeryFirst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Crawler/CrawlerVeryFirst.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Crawler/print.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Crawler/util.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
