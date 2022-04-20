@@ -1,5 +1,6 @@
 package Crawler;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.jsoup.Jsoup;
@@ -58,7 +59,7 @@ public class CrawlerDBUpdate {
                 }
 
                 JSONParser parser = new JSONParser();
-                JSONObject obj = (JSONObject) parser.parse(json);
+                JSONObject obj = (JSONObject)parser.parse(json);
 
                 String str[] = obj.get("title").toString().split(" ");
                 int series_num = util.isInteger(str[str.length - 1]) == true ? Integer.parseInt(str[str.length - 1]) : 0;
@@ -70,14 +71,19 @@ public class CrawlerDBUpdate {
                 String created_at = obj.get("pubdate").toString();
                 String publisher = obj.get("publisher").toString();
 
+                // json 안의 json ("image" 안의 "uri" 파싱)
+                JSONObject img_obj = (JSONObject)obj.get("image");
+                String image = img_obj.get("uri").toString();
+
                 stmt.execute("INSERT IGNORE INTO series(series_name) VALUES('" + series_name + "');");
 
-                String query = "INSERT IGNORE INTO book(book_id, book_name, series_num, book_url, isbn, author, created_at, publisher, price, series_id) VALUES("
+                String query = "INSERT IGNORE INTO book(book_id, book_name, series_num, book_url, isbn, author, created_at, publisher, price, book_image, series_id) VALUES("
                         + i + ", '" + book_name + "', '" + series_num + "', '" + book_url + "', '" + isbn + "', '"
-                        + author + "', '" + created_at + "', '" + publisher + "', " + obj.get("price")
-                        + ", (SELECT series_id FROM series WHERE series_name like '" + series_name + "'));";
+                        + author + "', '" + created_at + "', '" + publisher + "', " + obj.get("price") + ", '"
+                        + image + "' , (SELECT series_id FROM series WHERE series_name like '" + series_name + "'));";
                 util.print_book_data(i, series_num, book_name, series_name, book_url, isbn, author, created_at, publisher);
-                System.out.println("price : " + obj.get("price") + "\n");
+                System.out.println("price : " + obj.get("price"));
+                System.out.println("image = " + image + "\n");
                 stmt.execute(query);
             }
         } catch (Exception e) { e.printStackTrace();}

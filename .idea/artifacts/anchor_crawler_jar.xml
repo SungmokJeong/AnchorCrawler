@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="anchor_crawler:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/anchor_crawler_jar</output-path>
+    <root id="archive" name="anchor_crawler.jar">
+      <element id="module-output" name="anchor_crawler" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../DOWN/jsoup-1.14.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../DOWN/json-simple-1.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../DOWN/mysql-connector-java-8.0.27.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
