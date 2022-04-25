@@ -44,16 +44,21 @@ public class CrawlerDBUpdate {
             conn = DriverManager.getConnection(mysqlUrl, id, pw);
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT MAX(book_id) AS recent_book_id FROM book;");
-            int recent_book_id = 1;
+            int recent_book_id = 0;
     
             // book_id의 MAX값 조회하기
             if (rs.next())
                 recent_book_id = rs.getInt("recent_book_id");
             System.out.println("recent book_id : " + recent_book_id + "\n");
 
+            int break_trigger = 0; // break_trigger가 3이 되면 break
             for (int i = recent_book_id + 1; true; i++) {
                 String json = ScriptToJSON(i);
                 if (json == "null") {
+                    break_trigger++;
+                    continue;
+                }
+                if (break_trigger == 3) {
                     System.out.println("update finished");
                     break;
                 }
